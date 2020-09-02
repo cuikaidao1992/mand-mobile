@@ -4,6 +4,7 @@
     <md-number-keyboard
       v-model="isKeyBoardShow"
       type="simple"
+      :text-render="keyFormatter"
       @enter="onNumberEnter"
       @delete="onNumberDelete"
     ></md-number-keyboard>
@@ -11,7 +12,8 @@
   </div>
 </template>
 
-<script>import {NumberKeyboard, Button} from 'mand-mobile'
+<script>
+import {NumberKeyboard, Button} from 'mand-mobile'
 
 export default {
   name: 'number-keyboard-demo',
@@ -43,7 +45,8 @@ export default {
     },
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .md-example-display
